@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4    # Updated to v4
 
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
@@ -21,7 +21,7 @@ jobs:
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
 
       - name: Upload PDF
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4    # Updated to v4
         with:
           name: Resume
           path: Resume.pdf
