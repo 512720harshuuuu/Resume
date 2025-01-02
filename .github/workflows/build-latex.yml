@@ -1,0 +1,28 @@
+name: Build LaTeX document
+on: 
+  push:
+    paths:
+      - '**.tex'  # Triggers only when .tex files change
+  pull_request:
+    paths:
+      - '**.tex'
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: Resume.tex
+          args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v2
+        with:
+          name: Resume
+          path: Resume.pdf
+          retention-days: 5
