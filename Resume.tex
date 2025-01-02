@@ -1,0 +1,198 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\usepackage{url}
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=black, citecolor=blue]{hyperref}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{-4pt}\item
+  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    #1 & #2 \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Sai Harsha Mummaneni} \\ \vspace{1pt}
+    {341-732-7942} $|$ \href{mailto:harshamummaneni512720@gmail.com}{harshamummaneni512720@gmail.com} $|$ 
+    \href{https://www.linkedin.com/in/harsha-m-725a691a0/}{Linkedin} $|$ \href{https://github.com/512720harshuuuu}{GitHub} $|$ {San Francisco, CA}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of California at Berkeley}{May 2023}
+      {Masters in Operations Research}{}
+      \resumeItemListStart
+        \resumeItem{\textit{Graduate Assistant: MIDS 271 (Discrete Time Series Analysis), CIV ENG 286 (Digital Data Processing)}}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {BNY Mellon: TSG AI Team}{August 2024 -- Present}
+      {Senior Data Scientist}{New York, USA}
+      \resumeItemListStart
+        \resumeItem{Created three Agent LLaMA 3.1-based reasoning engines to suggest confidentiality in YK+ confluence pages. Deployed A/B tests to understand the causal effect of reasonings, improved data compliance metrics by 30\%. (Patent in Progress)}
+        \resumeItem{Architected binary classification system to classify documents leveraging ensemble of L2-Logistic Regression with NV-Embed and Stella embeddings. Implemented Ray framework for distributed computation, achieving 75\% accuracy.}
+        \resumeItem{Expanded training dataset of 1K Documents through augmentation techniques, combining embedding-based semantic word substitution with LLM-powered paraphrasing. Achieved 3x increase in training samples maintaining semantic coherence.}
+        \resumeItem{Engineered a chatbot for vulnerability queries, implementing search with ColBERT and cross-encoder reranking. Reduced query latency by 40\% through segmentation and VectorDB integration, saving YY+ hours annually in security assessments.}
+        \resumeItem{Led AI development teams using Agile methodologies, increasing sprint velocity 25\% by streamlining workflows.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Microsoft CXP: Customer Experiences}{July 2023 -- August 2024}
+      {Data Scientist}{San Fransisco, USA}
+      \resumeItemListStart
+        \resumeItem{Crafted a specialized index that transforms time series metrics into vector embeddings using HNSW embedding algorithm, effectively reducing the data retrieval latency X hours to Y seconds for Microsoft's internal teams.}
+        \resumeItem{Streamlined customer feedback into actionable insights using XGBoost+Vectorization classificaiton approach, increasing actionable insights by 80\% and reducing query processing time from 7 days to 24 hours.}
+        \resumeItem{Constructed ETL pipeline using Azure Data Factory for data ingestion from Dynamics 365, processing 1GB+ daily records. Orchestrated data transformations using PySpark, reducing processing time by 65\%.}
+        \resumeItem{Spearheaded Microsoft Fabric analytics adoption through rapid POC development, delivering C-level ML/AI performance reports with 15+ KPIs. Conducted a beta evaluation of Copilot's self-serve capabilities, documenting 6 key limitations.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {SkyKrafts Aerospace: Product science}{April 2021 -- August 2022}
+      {Data Scientist}{Bengaluru, India}
+      \resumeItemListStart
+        \resumeItem{Engineered end-to-end A/B testing pipeline for drone customization UI, comparing conversion rates across 100,00+ sessions using sequential hypothesis testing, reducing feature abandonment by 23\%.}
+        \resumeItem{Enhanced e-commerce platform performance through ML pipeline using Random Forest and XGBoost models, achieving 88\% accuracy in customer lifetime value prediction. Implemented automated retraining, leading to 10\% revenue growth.}
+        \resumeItem{Architected ML based notification system through user engagement data, driving conversion rate from 3.2\% to 3.68\% (15\% increase) and average order value from \$450 to \$549 (22\% growth).}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {SkyKrafts Aerospace: Product science}{April 2021 -- August 2022}
+      {Data Scientist}{Bengaluru, India}
+      \resumeItemListStart
+        \resumeItem{Engineered end-to-end A/B testing pipeline for drone customization UI, comparing conversion rates across 100,00+ sessions using sequential hypothesis testing, reducing feature abandonment by 23\%.}
+        \resumeItem{Enhanced e-commerce platform performance through ML pipeline using Random Forest and XGBoost models, achieving 88\% accuracy in customer lifetime value prediction. Implemented automated retraining, leading to 10\% revenue growth.}
+        \resumeItem{Architected ML based notification system through user engagement data, driving conversion.}
+
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\href{https://github.com/512720harshuuuu/RAGFROMSCRACTCH}{\textbf{Custom RAG and Graph RAG Implementation}} $|$ \textit{Python, LangChain, Streamlit, Pinecone}}{}
+      \resumeItemListStart
+        \resumeItem{Developed custom RAG and Graph RAG systems from scratch, implementing vector storage, chunking strategies}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\href{https://github.com/512720harshuuuu/Llama-Finetuning-Harsha}{\textbf{Llama 3.1 Model Fine-tuning}} $|$ \textit{PyTorch, Transformers, QLORA}}{}
+      \resumeItemListStart
+        \resumeItem{Fine-tuned Llama 3.1 model using QLORA and instruction tuning techniques on domain-specific data}
+      \resumeItemListEnd
+    \vspace{2pt}
+
+    \resumeProjectHeading
+      {\href{https://github.com/512720harshuuuu/SnapBoost}{\textbf{A/B Testing Framework}} $|$ \textit{Python, SciPy, Bayesian Statistics}}{}
+      \resumeItemListStart
+        \resumeItem{Built comprehensive A/B testing framework with statistical analysis tools, to evaluate feature importance.}
+      \resumeItemListEnd
+    \vspace{2pt}
+
+    \resumeProjectHeading
+      {\href{https://github.com/512720harshuuuu/NLP-LLM-Stocks}{\textbf{Stock Data Summarization Pipeline}} $|$ \textit{LangChain, yfinance, OpenAI}}{}
+      \resumeItemListStart
+        \resumeItem{Created LangChain-based chatbot for stock data summarization, integrating LLM's and instruct embeddings.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming Languages}{: Python, SQL, R, Matlab, JAVA, C++} \\
+     \textbf{Development Tools}{: Git, AWS Sagemaker, Azure ML Studio, VS Code, Power BI, Tableau} \\
+     \textbf{Mathematical Concepts}{: Linear Algebra, Hypothesis testing, Probability, Linear programming, Statistics} \\
+     \textbf{Libraries}{: TensorFlow, PyTorch, Pandas, NumPy, Matplotlib, Seaborn, scikit-learn, OpenCV} \\
+     \textbf{Cloud computing}{: AWS, Azure, Spark, Docker, Kubernetes, Scala}
+    }}
+ \end{itemize}
+
+\end{document}
